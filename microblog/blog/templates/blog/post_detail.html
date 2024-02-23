@@ -8,4 +8,16 @@
     <p>{{post.body}}</p>
     <hr />
 
+    <!-- コメント編集　-->
+    <h2 class="subtitle">コメント追加</h2>
+    <form action="." method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="field">
+            <div class="control">
+                <button class="button is-danger">送信</button>
+            </div>
+        </div>
+    </form>
+
 {% endblock %}
