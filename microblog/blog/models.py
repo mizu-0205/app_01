@@ -1,9 +1,9 @@
 from django.db import models
 
 # Create your models here.
-class POST(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
     intro = models.TextField()
     body =  models.TextField()
-    posted_data = models.DataTimeField(auto_now_add=True)
+    posted_data = models.DateTimeField(auto_now_add=True)
